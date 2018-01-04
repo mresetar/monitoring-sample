@@ -1,0 +1,10 @@
+BROKER SCHEMA util
+
+CREATE COMPUTE MODULE ErrorHandler_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+
+		SET OutputRoot.XMLNSC.result.result = InputExceptionList;
+		RETURN TRUE;
+	END;
+END MODULE;
